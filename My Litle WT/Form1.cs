@@ -180,8 +180,8 @@ namespace My_Litle_WT
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            //SoundPlayer mainMusic = new SoundPlayer(Resources.MainMusic);
-            //mainMusic.PlayLooping();
+            SoundPlayer mainMusic = new SoundPlayer(Resources.MainMusic);
+            mainMusic.PlayLooping();
 
             System.Timers.Timer basetimer = new System.Timers.Timer(8000);
             basetimer.AutoReset = true;
@@ -193,6 +193,7 @@ namespace My_Litle_WT
                 checkBar();
             };
             basetimer.Start();
+            mainMusic.Stop();
         }
 
         private void slotMachine_Click(object sender, EventArgs e)
